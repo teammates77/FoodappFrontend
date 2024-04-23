@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    background-image: url('https://p4.wallpaperbetter.com/wallpaper/570/747/803/chocolate-and-strawberries-dessert-wallpaper-preview.jpg');
+    background-size: cover;
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+   
+  .login-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: -60%;
+    margin-top: 80px;
+    width: 25%;
+  }
+   
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+   
+  .form-group {
+    margin-bottom: 20px;
+  }
+   
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+   
+  .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+   
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a:hover{
+    color: #007bff;
+  }
+  
+  .content{
+    overflow-x:hidden;
+    position:relative;
+    top: 100px;
+    
+  }
+  .section{
+    position:relative;
+    margin-bottom: 30px;
+    display: flex;
+    overflow-x: scroll;
+  }
+  
+  .content p{
+    font-weight: bold;
+    top: 80px;
+    font-size: 25px;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto', sans-serif;
+  }
+  a:hover{
+    color: #fc8019;
+  }

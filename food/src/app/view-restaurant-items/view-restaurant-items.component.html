@@ -1,0 +1,32 @@
+<div class="table-container">
+    <h2 class="table-heading">View Restaurant Items</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Item Image</th>
+          <th>Item Name</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Cost</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td><img src="{{ item.itemimageUrl }}" alt="Item Image" style="max-width: 100px;"></td>
+          <td>{{ item.itemName }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.category.categoryName }}</td>
+          <td>{{ item.cost }}</td>
+          <td>
+            <div class="action-buttons">
+            <button class="btn btn-primary" (click)="onUpdate(item.itemId)">Update</button>
+            <button class="btn btn-danger" (click)="onDelete(item.itemId)">Delete</button>
+        </div>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <a href="/merchant-dashboard">Back &rarr; Merchant-Dashboard</a>
+  <app-merchant-header></app-merchant-header>

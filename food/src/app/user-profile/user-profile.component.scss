@@ -1,0 +1,54 @@
+.container {
+  height: 100vh;
+  background-image: url('https://www.bhmpics.com/downloads/fast-food-images/63.fast-food-gericht-auf-blau_155003-27518.jpg');
+  background-size: cover;
+  margin-top: 7%;
+  margin-bottom: -7%;
+}
+
+.user-profile {
+  padding-top: 100px;
+  padding-bottom: 180px;
+  min-height: 70vh;
+  margin-left: 90px;
+}
+
+.user-profile h2 {
+  font-size: 35px;
+  color: aliceblue;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 400;
+  color: aliceblue;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start; 
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 100%; 
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
+.row .col-md-6 {
+  margin-bottom: 20px;
+}
+
+.form-group.row {
+  margin-bottom: -10px;
+}
+
+input.form-control {
+  width: 100%;
+  height: 38px;
+}

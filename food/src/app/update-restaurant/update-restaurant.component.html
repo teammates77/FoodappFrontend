@@ -1,0 +1,73 @@
+<!-- view-restaurant.component.html -->
+<div class="container">
+    <form [formGroup]="restaurantForm" (ngSubmit)="updateRestaurant()" class="restaurant-form">
+        <h2 class="restaurant-heading">Restaurant Details</h2>
+        <input type="hidden" formControlName="merchantId" [value]="restaurantData.merchantId">
+        <input type="hidden" formControlName="restaurantId" [value]="restaurantData.restaurantId">
+        <!-- <input type="hidden" formControlName="restaurantId" [value]="restaurantData.restaurantId">
+        <input type="hidden" formControlName="merchantId" [value]="restaurantData.merchantId">
+        Rest of your form code -->
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="restaurantName">Restaurant Name</label>
+            <input type="text" id="restaurantName" name="restaurantName" formControlName="restaurantName" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': restaurantForm.get('restaurantName').invalid && restaurantForm.get('restaurantName').touched }">
+            <div *ngIf="restaurantForm.get('restaurantName').invalid && restaurantForm.get('restaurantName').touched && !restaurantForm.get('restaurantName').errors?.['pattern']" class="invalid-feedback">Restaurant Name is required.</div>
+            <div *ngIf="restaurantForm.get('restaurantName').invalid && restaurantForm.get('restaurantName').dirty && restaurantForm.get('restaurantName').value !== '' && restaurantForm.get('restaurantName').errors?.['pattern']" class="invalid-feedback">Should contain only alphabets.</div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="managerName">Manager Name</label>
+            <input type="text" id="managerName" name="managerName" formControlName="managerName" [ngClass]="{ 'is-invalid': restaurantForm.get('managerName').invalid && restaurantForm.get('managerName').touched }">
+            <div *ngIf="restaurantForm.get('managerName').invalid && restaurantForm.get('managerName').touched" class="error-text">Manager Name is required and should contain only alphabets.</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="contact">Contact</label>
+            <input type="text" id="contact" name="contact" formControlName="contact" [ngClass]="{ 'is-invalid': restaurantForm.get('contact').invalid && restaurantForm.get('contact').touched }">
+            <div *ngIf="restaurantForm.get('contact').invalid && restaurantForm.get('contact').touched" class="error-text">Please enter a valid contact number.</div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="addressLine">Address Line</label>
+            <input type="text" id="addressLine" name="addressLine" formControlName="addressLine" [ngClass]="{ 'is-invalid': restaurantForm.get('addressLine').invalid && restaurantForm.get('addressLine').touched }">
+            <div *ngIf="restaurantForm.get('addressLine').invalid && restaurantForm.get('addressLine').touched" class="error-text">Address Line is required.</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" formControlName="city" [ngClass]="{ 'is-invalid': restaurantForm.get('city').invalid && restaurantForm.get('city').touched }">
+            <div *ngIf="restaurantForm.get('city').invalid && restaurantForm.get('city').touched" class="error-text">City is required and should contain only alphabets.</div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" formControlName="state" [ngClass]="{ 'is-invalid':restaurantForm.get('state').invalid && restaurantForm.get('state').touched }">
+            <div *ngIf="restaurantForm.get('state').invalid && restaurantForm.get('state').touched" class="error-text">State is required and should contain only alphabets.</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" formControlName="country" [ngClass]="{ 'is-invalid': restaurantForm.get('country').invalid && restaurantForm.get('country').touched }">
+            <div *ngIf="restaurantForm.get('country').invalid && restaurantForm.get('country').touched" class="error-text">Country is required and should contain only alphabets.</div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="pinCode">Pin Code</label>
+            <input type="text" id="pinCode" name="pinCode" formControlName="pinCode" [ngClass]="{ 'is-invalid': restaurantForm.get('pinCode').invalid && restaurantForm.get('pinCode').touched }">
+            <div *ngIf="restaurantForm.get('pinCode').invalid && restaurantForm.get('pinCode').touched" class="error-text">Pin Code is required and should contain only numbers.</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label for="restaurant_image_Url">Restaurant Image URL</label>
+            <input type="text" id="restaurant_image_Url" name="restaurant_image_Url" formControlName="restaurant_image_Url" [ngClass]="{ 'is-invalid': restaurantForm.get('restaurant_image_Url').invalid && restaurantForm.get('restaurant_image_Url').touched }">
+            <div *ngIf="restaurantForm.get('restaurant_image_Url').invalid && restaurantForm.get('restaurant_image_Url').touched" class="error-text">Restaurant Image URL is required.</div>
+          </div>
+        </div>
+      <div class="button-container">
+        <button type="submit" [disabled]="restaurantForm.invalid" class="btn btn-md btn-success">Update Restaurant</button>
+        <button type="button" (click)="onCancel()" class="btn btn-md btn-danger">Cancel</button>
+      </div>
+      <a href="/view-restaurant" >Back &rarr; View Upadated Restaurant</a>
+    </form>
+  </div>
+  <app-merchant-header></app-merchant-header>

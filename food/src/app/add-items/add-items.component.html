@@ -1,0 +1,41 @@
+<div class="container">
+    <form [formGroup]="itemForm" (ngSubmit)="addItem()" class="restaurant-form">
+        <h2>Add Items</h2>
+        <div class="form-group">
+            <label for="itemName">Item Name</label>
+            <input type="text" id="itemName" formControlName="itemName" class="form-control" required>
+            <div *ngIf="itemForm.get('itemName').invalid && itemForm.get('itemName').touched" class="text-danger">Item Name is required.</div>
+            <div *ngIf="itemForm.errors?.['pattern']">This field must contain only alphabets.</div>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" formControlName="description" class="form-control" required></textarea>
+            <div *ngIf="itemForm.get('description').invalid && itemForm.get('description').touched" class="text-danger">Description is required.</div>
+        </div>
+        <div class="form-group">
+            <label for="itemimageUrl">Item Image URL</label>
+            <input type="text" id="itemimageUrl" formControlName="itemimageUrl" class="form-control" required>
+            <div *ngIf="itemForm.get('itemimageUrl').invalid && itemForm.get('itemimageUrl').touched" class="text-danger">Item Image URL is required.</div>
+        </div>
+        <div class="form-group">
+            <label for="categoryId">Category</label>
+            <select id="categoryId" formControlName="categoryId" class="form-control" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="1">1:Starters</option>
+                <option value="2">2:Main Course</option>
+                <option value="3">3:Desserts</option>
+                <option value="4">4:Beverages</option>
+            </select>
+            <div *ngIf="itemForm.get('categoryId').invalid && itemForm.get('categoryId').touched" class="text-danger">Category is required.</div>
+        </div>
+        <div class="form-group">
+            <label for="cost">Cost</label>
+            <input type="number" id="cost" formControlName="cost" class="form-control" required>
+            <div *ngIf="itemForm.get('cost').invalid && itemForm.get('cost').touched" class="text-danger">Cost is required.</div>
+        </div>
+        <button type="submit" [disabled]="itemForm.invalid" class="btn btn-custom">Add Item</button>
+        <a href="/merchant-dashboard" style="color: rgb(62, 184, 62);">Back &rarr; Merchant-Dashboard</a>
+    </form>
+</div>
+<app-merchant-header></app-merchant-header>
+

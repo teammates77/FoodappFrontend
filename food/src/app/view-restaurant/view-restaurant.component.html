@@ -1,0 +1,42 @@
+<div class="container">
+  <h2 class="table-heading">View Restaurant Details</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Restaurant Image</th>
+        <th>Restaurant Name</th>
+        <th>Manager Name</th>
+        <th>Contact</th>
+        <th>Address Line</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Pin Code</th>
+        <th>Action</th> <!-- Added -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <img [src]="restaurant.restaurant_image_Url" class="item-image">
+        </td>
+        <td>{{ restaurant.restaurantName }}</td>
+        <td>{{ restaurant.managerName }}</td>
+        <td>{{ restaurant.contact }}</td>
+        <td>{{ restaurant.addressLine }}</td>
+        <td>{{ restaurant.city }}</td>
+        <td>{{ restaurant.state }}</td>
+        <td>{{ restaurant.country }}</td>
+        <td>{{ restaurant.pinCode }}</td>
+        <td>
+          <div class="action-buttons">
+          <button class="btn btn-primary" (click)="onUpdate(restaurant.restaurantId)">Update</button> 
+          <button class="btn btn-danger" (click)="onDelete(restaurant.restaurantId)">Delete</button> 
+        </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<a href="/merchant-dashboard" >Back &rarr; Merchant-Dashboard</a>
+ <app-merchant-header></app-merchant-header>

@@ -1,0 +1,135 @@
+
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th, .cart-table td {
+  border: 1px solid #191919;
+  padding: 8px;
+  text-align: left;
+}
+
+.cart-table th {
+  background-color: #f2f2f2;
+  color: #e7720c;
+  font-size: large;
+}
+
+.cart-table tfoot td {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.action-button, .remove-button {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.action-button {
+  background-color: #4CAF50;
+  color: white;
+  margin-right: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+
+.action-column {
+  text-align: left;
+}
+
+.remove-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.cart-buttons {
+  display: flex;
+}
+
+.cart-buttons {
+  display: flex;
+  margin-top: 20px; 
+  justify-content: center; 
+
+}
+.container h2 {
+  color: #e7720c;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 80px;
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center;
+}
+
+
+
+
+.cart-table {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.cart-table thead th {
+  text-align: center;
+  background-color: #e7720c;
+  color: white; 
+}
+
+
+.cart-buttons button {
+  padding: 6px 12px; 
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-buttons button:nth-child(1) {
+  background-color: #4CAF50; 
+  color: white;
+}
+
+
+.cart-buttons button:nth-child(2) {
+  background-color: #008CBA; 
+  color: white;
+}
+
+
+.cart-buttons button:nth-child(3) {
+  background-color: #f44336; 
+  color: white;
+}
+
+
+.cart-buttons button:last-child {
+  margin-right: 0;
+}
+.action-button.minus {
+  background-color: #f44336; 
+ 
+}
+.container {
+  height: 125vh;
+  background-image: url('https://st3.depositphotos.com/1558912/19051/i/1600/depositphotos_190518482-stock-photo-food-cooking-ingredients-background-on.jpg');
+  background-size: cover;
+  text-align: center; 
+
+}
+
+
+
+.cart-table tr:not(.dum-biryani):nth-child(even) {
+  background-color: #fac086; 
+}
+
+
+
+.cart-table tbody {
+  background-color: #f2f2f2; 
+}

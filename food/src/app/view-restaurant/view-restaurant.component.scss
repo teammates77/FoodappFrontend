@@ -1,0 +1,45 @@
+.container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top:70px ;
+
+  .table-heading {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  .action-buttons {
+    display: flex;
+    gap: 10px; 
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    td img.item-image {
+      max-width: 100px;
+    }
+
+    td:last-child {
+      text-align: center;
+    }
+
+    .btn {
+      margin-right: 5px;
+    }
+    
+  }
+}

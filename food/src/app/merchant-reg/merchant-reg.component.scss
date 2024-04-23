@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 145vh;
+    background-image: url('https://p4.wallpaperbetter.com/wallpaper/491/779/814/dessert-4k-background-for-computer-wallpaper-preview.jpg');
+    background-size: cover;
+    margin-bottom: 7px;
+    width: 100%;
+  }
+   
+  .register {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    margin-right: 70%;
+   
+  
+  }
+   
+  .register h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+   
+  .form-control {
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+   
+  .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+   
+ 
+
+
+  
+  

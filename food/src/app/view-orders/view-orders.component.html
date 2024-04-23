@@ -1,0 +1,39 @@
+<div class="orders-container" *ngIf="orders.length > 0; else noOrders">
+  <h2>Orders of Restaurant</h2>
+  <table class="scrollable-table-body">
+    <thead>
+      <tr>
+        <th>Order Item ID</th>
+        <th>Item Name</th>
+        <th>Quantity</th>
+        <th>Cost</th>
+        <th>Delivery status</th>
+        <th>Delivery Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.orderItemId }}</td>
+        <td>{{ order.itemName }}</td>
+        <td>{{ order.quantity }}</td>
+        <td>{{ order.cost }}</td>
+        <td>{{ order.deliveryStatus }}</td>
+        <td>
+          {{ order.address.buildingName }},
+          {{ order.address.streetName }},
+          {{ order.address.area }},
+          {{ order.address.city }},
+          {{ order.address.state }},
+          {{ order.address.country }},
+          {{ order.address.pinCode }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #noOrders>
+  <div class="no-orders-container">
+      <p>No orders available.</p>
+  </div>
+</ng-template>
+<app-merchant-header></app-merchant-header>

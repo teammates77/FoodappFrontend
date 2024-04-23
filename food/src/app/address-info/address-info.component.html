@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="Address-info">
+      <h2 style="margin-bottom: 40px; color: rgb(177, 70, 134); text-align: center;" >Add Address</h2>
+      <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="buildingName">Building Name</label>
+            <input type="text" id="buildingName" formControlName="buildingName" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': addressForm.get('buildingName').invalid && (addressForm.get('buildingName').dirty || addressForm.get('buildingName').touched) }">
+            <div *ngIf="addressForm.get('buildingName').invalid && (addressForm.get('buildingName').dirty || addressForm.get('buildingName').touched)" class="invalid-feedback">
+              <div *ngIf="addressForm.get('buildingName').errors?.['required']">Building Name is required.</div>
+            </div>
+          </div>
+  
+          <div class="col-md-6">
+            <label for="streetName">Street Name</label>
+            <input type="text" id="streetName" formControlName="streetName" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': addressForm.get('streetName').invalid && (addressForm.get('streetName').dirty || addressForm.get('streetName').touched) }">
+            <div *ngIf="addressForm.get('streetName').invalid && (addressForm.get('streetName').dirty || addressForm.get('streetName').touched)" class="invalid-feedback">
+              <div *ngIf="addressForm.get('streetName').errors?.['required']">Street Name is required.</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="area">Area</label>
+            <input type="text" id="area" formControlName="area" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': addressForm.get('area').invalid && (addressForm.get('area').dirty || addressForm.get('area').touched) }">
+            <div *ngIf="addressForm.get('area').invalid && (addressForm.get('area').dirty || addressForm.get('area').touched)" class="invalid-feedback">
+              <div *ngIf="addressForm.get('area').errors?.['required']">Area is required.</div>
+            </div>
+          </div>
+  
+          <div class="col-md-6">
+            <label for="city">City</label>
+            <input type="text" id="city" formControlName="city" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': addressForm.get('city').invalid && (addressForm.get('city').dirty || addressForm.get('city').touched) }">
+            <div *ngIf="addressForm.get('city').invalid && (addressForm.get('city').dirty || addressForm.get('city').touched)" class="invalid-feedback">
+              <div *ngIf="addressForm.get('city').errors?.['required']">City is required.</div>
+            </div>
+          </div>
+        </div>
+  
+    
+        <div class="row">
+          <div class="col-md-6">
+            <label for="state">State</label>
+            <input type="text" id="state" formControlName="state" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': addressForm.get('state').invalid && (addressForm.get('state').dirty || addressForm.get('state').touched) }">
+            <div *ngIf="addressForm.get('state').invalid && (addressForm.get('state').dirty || addressForm.get('state').touched)" class="invalid-feedback">
+              <div *ngIf="addressForm.get('state').errors?.['required']">State is required.</div>
+            </div>
+          </div>
+  
+          <div class="col-md-6">
+            <label for="country">Country</label>
+            <input type="text" id="country" formControlName="country" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': addressForm.get('country').invalid && (addressForm.get('country').dirty || addressForm.get('country').touched) }">
+            <div *ngIf="addressForm.get('country').invalid && (addressForm.get('country').dirty || addressForm.get('country').touched)" class="invalid-feedback">
+              <div *ngIf="addressForm.get('country').errors?.['required']">Country is required.</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-6">
+            <label for="pinCode">PinCode</label>
+            <input type="number" id="pinCode" formControlName="pinCode" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': addressForm.get('pinCode').invalid && (addressForm.get('pinCode').dirty || addressForm.get('pinCode').touched) }">
+            <div *ngIf="addressForm.get('pinCode').invalid && (addressForm.get('pinCode').dirty || addressForm.get('pinCode').touched)" class="invalid-feedback">
+              <div *ngIf="addressForm.get('pinCode').errors?.['required']">Pin Code is required.</div>
+              <div *ngIf="addressForm.get('pinCode').errors?.['pattern']">Pin Code must be 6 digits.</div>
+            </div>
+          </div>
+        </div>
+      
+    <button type="submit" [disabled]="addressForm.invalid" class="btn btn-primary">Save Address</button>
+  
+  </form>
+</div>
+
+<table class="address-table">
+    <thead>
+      <tr>
+        <th>Building Name</th>
+        <th>Street Name</th>
+        <th>Area</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Pin Code</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let address of addresses">
+        <td>{{ address.buildingName }}</td>
+        <td>{{ address.streetName }}</td>
+        <td>{{ address.area }}</td>
+        <td>{{ address.city }}</td>
+        <td>{{ address.state }}</td>
+        <td>{{ address.country }}</td>
+        <td>{{ address.pinCode }}</td>
+        <td class="button-action">
+          <button class="btn btn-primary" style="background-color: rgb(39, 149, 72);" (click)="selectAddress(address) ">Select</button>
+          <button class="btn btn-danger"  (click)="deleteAddress(address)">Delete</button> 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-header></app-header>

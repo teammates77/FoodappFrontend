@@ -1,0 +1,17 @@
+<div class="bag">
+
+
+  <div class="offer-page">
+    <h3 style="margin-left: 30%;">Restaurants With Great Offers Near Me</h3>
+    <div class="offer-list">
+      <div class="offer-item" *ngFor="let offer of offers">
+        <img [src]="offer.image" alt="Offer Image">
+        <div class="offer-details">
+          <h3>{{ offer.title }}</h3>
+          <p>{{ offer.description }}</p>
+          <p>Valid Until: {{ offer.validUntil }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

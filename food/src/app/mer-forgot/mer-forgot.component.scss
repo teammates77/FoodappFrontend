@@ -1,0 +1,147 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/471/902/514/food-ice-cream-cherry-fruit-wallpaper-preview.jpg');
+    background-size: cover;
+    margin-top: 7%;
+    margin-bottom: -7%;
+  }
+   
+  .forgot-form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.881);
+    color: #000;
+    margin-left: 70px;
+ 
+  }
+ 
+   
+  .regforgot {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+   
+  .form-group {
+    margin-bottom: 20px;
+  }
+   
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+   
+  .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+   
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  .navbar{
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100vw;
+    height: 80px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 40px -20px rgba(40,44,63,.15);
+  }
+ 
+  ul{
+    display: flex;
+    list-style: none;
+  }
+  li{
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .leftbar{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .leftbar li{
+    margin: 5px;
+  }
+  .leftbar img{
+    height: 50px;
+    margin: 0 25px;
+  }
+ 
+  .rigthbar{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+ 
+  li:hover{
+    color: #fc8019;
+  }
+  i{
+    position: relative;
+  }
+ 
+  .content{
+    overflow-x:hidden;
+    position:relative;
+    top: 100px;
+   
+  }
+  .section{
+    position:relative;
+    margin-bottom: 30px;
+    display: flex;
+    overflow-x: scroll;
+  }
+ 
+  .content p{
+    font-weight: bold;
+    top: 80px;
+    font-size: 25px;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto', sans-serif;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  a:hover{
+    color: #fc8019;
+  }
+  .forgot-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: -60%;
+    width: 25%;
+  }
+   
+  .forgot-form h2 {
+    text-align: center;
+ 
+  }

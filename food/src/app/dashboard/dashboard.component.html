@@ -1,0 +1,25 @@
+<div class="content">
+    <p id="categories">Categories</p>
+    <div class="section" id="category-section">
+        <div *ngFor="let category of categories" class="box1" [id]="'category' + category.categoryId" style="text-align: center;">
+            <a [routerLink]="['/category-menu', category.categoryId]"> 
+                <img [src]="category.categoryUrl" [alt]="category.categoryName">
+            </a>
+            <h6>{{ category.categoryName }}</h6>
+        </div>
+    </div>
+    <br>
+    <p id="restaurant">Restaurants</p>
+    <div class="section" id="restaurant-section">
+        <div *ngFor="let restaurant of allRestaurants" class="box2" [id]="'restaurant' + restaurant.restaurantId" style="text-align: center;">
+            <a [routerLink]="['/restaurant-menu', restaurant.restaurantId]"> 
+                <img [src]="restaurant.restaurant_image_Url" [alt]="restaurant.restaurantName">
+              </a>
+            <h6>{{ restaurant.restaurantName }}</h6>
+            <div style="font-size:smaller;">
+                <i class="bi bi-phone"></i> {{ restaurant.contact }}
+            </div>
+        </div>
+    </div>
+</div>
+<app-header></app-header>

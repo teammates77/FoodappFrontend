@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="user-profile">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <h2 style="margin-bottom: 40px; color: aliceblue;">Your profile</h2>
+      <form [formGroup]="userProfileForm" (ngSubmit)="updateUser()">
+          <div class="col-md-6">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" class="form-control" formControlName="firstName">
+            <span class="error-text" *ngIf="userProfileForm.get('firstName').invalid && userProfileForm.get('firstName').touched">Name cannot be blank.</span>
+          </div>
+          <div class="col-md-6">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" class="form-control" formControlName="lastName">
+            <span class="error-text" *ngIf="userProfileForm.get('lastName').invalid && userProfileForm.get('lastName').touched">Name cannot be blank.</span>
+          </div>
+          <div class="col-md-6">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" formControlName="email">
+          </div>
+          <div class="col-md-6">
+            <label for="phoneNumber">Phone</label>
+            <input type="tel" id="phoneNumber" class="form-control" formControlName="phoneNumber">
+            <span class="error-text" *ngIf="userProfileForm.get('phoneNumber').invalid">Enter a 10 digit valid phone number.</span>
+          </div>
+        <!-- </div> -->
+
+        <div class="button-container">
+          <button type="submit" [disabled]="userProfileForm.invalid" class="btn btn-md btn-success">Save Changes</button>
+          <button type="button" (click)="onCancel()" class="btn btn-md btn-danger">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<app-header></app-header>

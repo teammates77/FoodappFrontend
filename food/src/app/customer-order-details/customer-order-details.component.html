@@ -1,0 +1,33 @@
+<div *ngIf="userOrders">
+    <h2>Order Details</h2>
+    <table>
+      <tr>
+        <th>OrderId</th>
+        <th>Payment ID</th>
+        <th>Item Name</th>
+        <th>Quantity</th>
+        <th>Cost</th>
+        <th>Status</th>
+        <th>Delivery Status</th>
+        <th>Action</th> 
+      </tr>
+      <tr *ngFor="let order of userOrders">
+        <td>{{ order.orderId }}</td>
+        <td>{{ order.paymentId }}</td>
+        <td>{{ order.itemName }}</td>
+        <td>{{ order.quantity }}</td>
+        <td>{{ order.cost }}</td>
+        <td>{{ order.status }}</td>
+        <td>{{ order.deliveryStatus }}</td>
+        <td>
+            <div class="order-status-container">
+                <button class="btn btn-primary" style="background-color: rgb(14, 116, 14);" [disabled]="order.deliveryStatus !== 'Pending'" (click)="updateOrderStatus(order.orderItemId, 'Received')">Received</button>
+                <button class="btn btn-danger" [disabled]="order.deliveryStatus !== 'Pending'" (click)="updateOrderStatus(order.orderItemId, 'Cancel')">Cancel</button>
+            </div>
+            
+        </td>
+      </tr>
+    </table>
+  </div>
+  <app-header></app-header>
+  

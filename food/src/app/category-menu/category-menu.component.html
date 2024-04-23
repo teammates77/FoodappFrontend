@@ -1,0 +1,34 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <img src="https://th.bing.com/th?id=OIP.2ZEUg_-kwDDUY-v8Qfu9NAHaEy&w=310&h=201&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="Restaurant Logo" class="restaurant-logo">
+        <h2>Category Menu</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div *ngIf="itemsByCategory.length > 0; else noItems">
+          <ul class="menu-list">
+            <li class="menu-item" *ngFor="let item of itemsByCategory">
+              <div class="item-details">
+                <img [src]="item.itemimageUrl" alt="{{ item.itemName }}" class="item-image">
+                <div>
+                  <h4>{{ item.itemName }}</h4>
+                  <p>{{ item.description }}</p>
+                </div>
+              </div>
+              <div class="item-price">
+                <p>Cost: ₹{{ item.cost }}</p>
+              </div>
+              <button class="add-to-cart-button" (click)="addToCart(item.itemId,item.restaurantId)">Add</button>
+            </li>
+          </ul>
+        </div>
+        <ng-template #noItems>
+          <p>No items available for this category.</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <app-header></app-header>

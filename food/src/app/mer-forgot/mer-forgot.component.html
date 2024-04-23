@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="forgot-form-container">
+      <h2>Forgot Password</h2>
+      <form [formGroup]="emailForm" (ngSubmit)="onSubmit()" #form="ngForm">
+        <div class="row">
+          <div class="col-md-12">
+            <label class="form-label" for="email">Email</label>
+            <input matInput type="email" id="email" name="email" formControlName="email" placeholder="Email-Id" required class="form-control form-control-sm" [class.is-invalid]="email.invalid && (email.dirty || email.touched)" />
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
+              <div *ngIf="email.errors?.['required']">This field is required.</div>
+              <div *ngIf="email.errors?.['email']">Invalid email format.</div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" style="margin-top: 2%;" (click)="forgotPassword()">
+          Send Link
+        </button>
+      </form>
+    </div>
+  </div>
+  <app-merchant-header></app-merchant-header>

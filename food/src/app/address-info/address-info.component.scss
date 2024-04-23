@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 130vh;
+  width: 100%;
+  background-image: url('https://img.freepik.com/free-photo/ice-cream-flavors-pink-table_23-2148268187.jpg?size=626&ext=jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  margin-top: 45px;
+}
+
+
+.Address-info {
+  margin-top: 50px;
+  width: 39%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.address-table-container {
+  width: 45%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: auto; 
+}
+
+.address-table {
+  margin-top: 50px;
+  width: 70%; 
+  border-collapse: collapse;
+  margin-left: 40px;
+}
+
+.address-table th,
+.address-table td {
+  border: 1px solid #191919;
+  padding: 4px; 
+  text-align: left;
+  font-size: 14px; 
+}
+
+.address-table th {
+  background-color: #c263ae;
+  color: #f0f0f0;
+}
+
+.address-table tbody tr:nth-child(even) {
+  background-color: #db81ab;
+}
+.address-table tbody tr:nth-child(odd) {
+  background-color: #fdfefb;
+}
+
+
+.Address-info input[type="text"],
+.Address-info input[type="text"],
+.Address-info input[type="number"] {
+  width: 160px;
+  height: 40px; 
+  padding: 4px; 
+  margin-bottom: 8px; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+  font-size: 14px; 
+}
+
+
+.button-action {
+  display: flex; 
+}
+
+.button-action button {
+  margin-right: 5px; 
+}
+
+.button-action button:last-child {
+  margin-right: 0; 
+}
+
+.address-table td.button-action {
+  padding: 4px; 
+}
+.button-action button:hover {
+  opacity: 0.3; 
+}

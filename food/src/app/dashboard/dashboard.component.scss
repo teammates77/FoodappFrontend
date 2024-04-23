@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Roboto', sans-serif;
+    
+}
+*::-webkit-scrollbar {
+    display: none;
+  }
+.section {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+    white-space: nowrap; /* Prevent wrapping to next line */
+}
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    overflow-x:hidden;
+    position:relative;
+    top: 100px;
+    background-color: ghostwhite;
+}
+.section{
+    position:relative;
+    margin-bottom: 30px;
+    display: flex;
+    overflow-x: scroll;
+    text-align: center;
+}
+
+.content p{
+    font-weight: bold;
+    top: 80px;
+    font-size: 25px;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto', sans-serif;
+}
+.box1 img{
+    overflow: auto;
+    width: 425px;
+    height: 253px;
+    margin: 5px;
+    border-radius: 30px;
+}
+.box2 img{
+    overflow: auto;
+    width: 150px;
+    height: 150px;
+    margin: 0 20px;
+    border-radius: 100px;
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: grey;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h6{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2%;
+    margin-left: 2%;
+    font-weight: bold;
+    margin-right: 1%;
+}
+a{
+    color: black;
+    margin-top: 1.9%;
+    text-decoration: none;
+}
+a:hover{
+    color: #fc8019;
+}
+img {
+    width: 16px;
+    cursor: pointer;
+    padding: 10px;
+    border: solid 6px transparent;
+}
+img:hover {
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 3px rgba(127, 127, 127, 0.15);
+}
+/* CSS for restaurant information section */
+.content {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  #restaurant {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  #restaurant-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .box1 {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  
+  .bi.bi-phone {
+    color: blue; 
+  }
+  
+  
+  .bi.bi-geo-alt {
+    color: green; 
+  }
+  #category-section {
+    margin-bottom: -80px; 
+}
+#categories,
+#restaurant {
+    font-size: 30px;
+    margin-bottom: 10px; 
+}
+
+
+.box1 {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.box2 {
+    flex: 0 0 auto; 
+    width: 150px;
+    margin-right: 20px; 
+}
+#category-section {
+    margin-bottom: 20px;
+}
+
+
+.restaurant-heading {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

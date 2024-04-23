@@ -1,0 +1,65 @@
+<div class="container">
+  <form [formGroup]="merchantForm" (ngSubmit)="submitRestaurant()" class="restaurant-form">
+    <h2 class="restaurant-heading">Add Restaurant</h2>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="restaurantName">Restaurant Name</label>
+        <input type="text" id="restaurantName" name="restaurantName" formControlName="restaurantName" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': merchantForm.get('restaurantName').invalid && merchantForm.get('restaurantName').touched }">
+        <div *ngIf="merchantForm.get('restaurantName').invalid && merchantForm.get('restaurantName').touched && !merchantForm.get('restaurantName').errors?.['pattern']" class="invalid-feedback">Restaurant Name is required.</div>
+        <div *ngIf="merchantForm.get('restaurantName').invalid && merchantForm.get('restaurantName').dirty && merchantForm.get('restaurantName').value !== '' && merchantForm.get('restaurantName').errors?.['pattern']" class="invalid-feedback">Should contain only alphabets.</div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="managerName">Manager Name</label>
+        <input type="text" id="managerName" name="managerName" formControlName="managerName" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': merchantForm.get('managerName').invalid && merchantForm.get('managerName').touched }">
+        <div *ngIf="merchantForm.get('managerName').invalid && merchantForm.get('managerName').touched" class="invalid-feedback">Manager Name is required & contain only alphabets</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="contact">Contact</label>
+        <input type="text" id="contact" name="contact" formControlName="contact" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': merchantForm.get('contact').invalid && merchantForm.get('contact').touched }">
+        <div *ngIf="merchantForm.get('contact').invalid && merchantForm.get('contact').touched" class="invalid-feedback">Please enter a valid contact number.</div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="addressLine">Address Line</label>
+        <input type="text" id="addressLine" name="addressLine" formControlName="addressLine" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': merchantForm.get('addressLine').invalid && merchantForm.get('addressLine').touched }">
+        <div *ngIf="merchantForm.get('addressLine').invalid && merchantForm.get('addressLine').touched" class="invalid-feedback">Address Line is required.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" formControlName="city" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': merchantForm.get('city').invalid && merchantForm.get('city').touched }">
+        <div *ngIf="merchantForm.get('city').invalid && merchantForm.get('city').touched" class="invalid-feedback">City is required and should contain only alphabets.</div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" formControlName="state" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': merchantForm.get('state').invalid && merchantForm.get('state').touched }">
+        <div *ngIf="merchantForm.get('state').invalid && merchantForm.get('state').touched" class="invalid-feedback">State is required and should contain only alphabets.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" formControlName="country"required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': merchantForm.get('country').invalid && merchantForm.get('country').touched }">
+        <div *ngIf="merchantForm.get('country').invalid && merchantForm.get('country').touched" class="invalid-feedback">Country is required and should contain only alphabets.</div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="pinCode">Pin Code</label>
+        <input type="text" id="pinCode" name="pinCode" formControlName="pinCode" required class="form-control form-control-sm" [ngClass]="{ 'is-invalid': merchantForm.get('pinCode').invalid && merchantForm.get('pinCode').touched }">
+        <div *ngIf="merchantForm.get('pinCode').invalid && merchantForm.get('pinCode').touched" class="invalid-feedback">Pin Code is required and should contain only numbers.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label for="restaurant_image_Url">Restaurant Image URL</label>
+        <input type="text" id="restaurant_image_Url" name="restaurant_image_Url" formControlName="restaurant_image_Url" [ngClass]="{ 'is-invalid': merchantForm.get('restaurant_image_Url').invalid && merchantForm.get('restaurant_image_Url').touched }">
+        <div *ngIf="merchantForm.get('restaurant_image_Url').invalid && merchantForm.get('restaurant_image_Url').touched" class="invalid-feedback">Restaurant Image URL is required.</div>
+      </div>
+    </div>
+    <button type="submit" class="submit-button">Submit Restaurant</button>
+    <a href="/merchant-dashboard" style="color: rgb(66, 157, 66);">Back &rarr; Merchant-Dashboard</a>
+  </form>
+</div>
+
+<app-merchant-header></app-merchant-header>

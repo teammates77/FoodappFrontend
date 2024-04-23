@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+    background-image: url('https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg');
+    background-size: cover;
+    margin-top: 40px;
+    margin-bottom: 7px;
+  }
+  
+  .restaurant-heading {
+    color: #413e3e;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .restaurant-form {
+    width: 400px;
+    margin-left: 90px;
+    margin-top: 10px;
+    margin-right: auto;
+    background-color: #f1eced;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .button-container {
+    margin-top: 10px; 
+}
+
+.button-container button {
+    margin-right: 40px; 
+}
+
+  // label {
+  //   font-weight: bold;
+  // }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #12824a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #156d38;
+  }
+  .invalid-input input[type="text"] {
+    border: 1px solid red;
+  }
+  

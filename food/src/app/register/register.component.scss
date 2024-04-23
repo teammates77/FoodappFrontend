@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg');
+  background-size: cover;
+  margin-top: 40px;
+  margin-bottom: 7px;
+}
+ 
+.register {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: -39%;
+  width: 40%;
+
+}
+ 
+.register h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+ 
+.form-group {
+  margin-bottom: 20px;
+}
+ 
+.form-control {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+ 
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+ 
+.btn:hover {
+  background-color: #0056b3;
+}
+a{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.content{
+  overflow-x:hidden;
+  position:relative;
+  top: 100px;
+  
+}
+.section{
+  position:relative;
+  margin-bottom: 30px;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.content p{
+  font-weight: bold;
+  top: 80px;
+  font-size: 25px;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', sans-serif;
+}
+
+.address-label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.row .col-md-6 {
+  margin-bottom: 10px;
+}
+.form-group.row{
+  margin-bottom: -10px; 
+  
+}
+.col-md-7{
+  width: auto;
+}
+

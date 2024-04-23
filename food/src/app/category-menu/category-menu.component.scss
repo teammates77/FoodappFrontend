@@ -1,0 +1,78 @@
+.container {
+    margin-top: 80px;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-details h4 {
+    margin: 0;
+  }
+  
+  .item-details p {
+    margin: 5px 0;
+    font-style: italic;
+    
+    
+  }
+  
+  .item-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+  
+  .item-price p {
+    margin: 0;
+    font-style: italic;
+    margin-right: 13px; 
+    margin-left: 10px; 
+  }
+  
+  button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #28a745; 
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #218838; 
+  }
+  .container {
+    max-width: 700px;
+    margin: 80px auto; 
+  }
+  .restaurant-logo {
+    float: right;
+    width: 100px; 
+    height: auto; 
+    margin-right: 10px;
+  }
+  h2 {
+    color: maroon;
+    font-style: italic;
+  }
+  .item-details h4 {
+    font-style: italic;
+  }
+ 

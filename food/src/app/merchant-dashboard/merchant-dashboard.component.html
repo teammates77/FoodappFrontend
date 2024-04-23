@@ -1,0 +1,35 @@
+<div class="container">
+ <div class="row">
+  <div class="card" *ngIf="!isRestaurantDataPresent">
+    <h4> <U>Add Your Restaurant</U></h4>
+    <p>Add your Restaurant Details.</p>
+    <a routerLink="/merchant-restaurant-info">Add Restaurant</a>
+  </div>
+
+ 
+      <div class="card">
+        <h4> <U>Add Your Items</U></h4>
+        <p>Add Items to your Restaurant Menu.</p>
+        <a routerLink="/add-items">Add Items</a>
+      </div>
+  </div>
+
+    <div class="row">
+      <div class="card">
+        <h4> <U>View Orders</U></h4>
+        <p>Manage the Food Orders.</p>
+        <a routerLink="/view-orders">View Orders</a>
+      </div>
+    <div class="card">
+      <h4> <U>View Restaurant</U></h4>
+      <p>Manage the Restaurant Details.</p>
+      <a routerLink="/view-restaurant">View Restaurant</a>
+    </div>
+    </div>
+    <div class="card">
+      <h4 ><U>View Items</U></h4>
+      <p>Manage the Food Items.</p>
+      <a routerLink="/view-restaurant-items">View Items</a>
+    </div>
+    </div>
+<app-merchant-header></app-merchant-header>

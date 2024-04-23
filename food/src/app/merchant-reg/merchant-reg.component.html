@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="register">
+      <h2>Merchant Register</h2>
+      <form [formGroup]="registrationform" #form="ngForm" (ngSubmit)="registerMerchant()">
+        <div class="row">
+          <div class="col-md-6">
+            <label class="form-label" for="firstName">First Name:</label>
+            <input matInput type="text" id="firstName" name="firstName" formControlName="firstName" placeholder="First Name" required class="form-control form-control-sm" [class.is-invalid]="firstName.invalid && (firstName.dirty || firstName.touched)" />
+            <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="invalid-feedback">
+              <div *ngIf="firstName.errors?.['required']">This field is required.</div>
+              <div *ngIf="firstName.errors?.['pattern']">This field must contain only alphabets.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="lastName">Last Name:</label>
+            <input matInput type="text" id="lastName" name="lastName" formControlName="lastName" placeholder="Last Name" required class="form-control form-control-sm" [class.is-invalid]="lastName.invalid && (lastName.dirty || lastName.touched)" />
+            <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="invalid-feedback">
+              <div *ngIf="lastName.errors?.['required']">This field is required.</div>
+              <div *ngIf="lastName.errors?.['pattern']">This field must contain only alphabets.</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="form-label" for="email">Email:</label>
+            <input matInput type="email" id="email" name="email" formControlName="email" placeholder="Email-Id" required class="form-control form-control-sm" [class.is-invalid]="email.invalid && (email.dirty || email.touched)" />
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
+              <div *ngIf="email.errors?.['required']">This field is required.</div>
+              <div *ngIf="!email.errors?.['pattern']">Invalid email format.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" formControlName="password" required minlength="6" class="form-control form-control-sm" [class.is-invalid]="password.invalid && (password.dirty || password.touched)" />
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="invalid-feedback">
+              <div *ngIf="password.errors?.['required']">This field is required.</div>
+              <div *ngIf="password.errors?.['minlength']">This field must have at least 6 characters.</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="phoneNumber" class="form-label">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" formControlName="phoneNumber" required minlength="10" class="form-control form-control-sm" [class.is-invalid]="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)" />
+            <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)" class="invalid-feedback">
+              <div *ngIf="phoneNumber.errors?.['required']">This field is required.</div>
+              <div *ngIf="phoneNumber.errors?.['minlength']">This field must have at least 10 numbers.</div>
+              <div *ngIf="phoneNumber.errors?.['maxlength']">This field must not have more than 10 numbers.</div>
+              <div *ngIf="phoneNumber.errors?.['pattern']">Invalid format.</div>
+            </div>
+          </div>
+        </div>
+    
+        <br>
+        <button [disabled]="registrationform.invalid" type="submit" class="btn btn-primary" style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
+        <div class="links" style="text-align: center;">
+          <a (click)="merchantLogin()">Login</a>
+        </div>
+   
+        <app-merchant-header></app-merchant-header>

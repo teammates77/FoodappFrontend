@@ -1,0 +1,21 @@
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+.nav-link:hover,
+.nav-link:hover .bi.bi-person-circle {
+  color: #fc8019;
+}
+
+.bi.bi-person-circle:hover {
+  color: inherit;
+}
+
+.nav-link,
+.bi.bi-person-circle {
+  transition: color 0.3s ease;
+}

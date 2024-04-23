@@ -1,0 +1,72 @@
+.container {
+    margin-top: 20px; 
+    background-image: url('https://live.staticflickr.com/2917/14234035074_d746751816_b.jpg');
+    background-size: cover; 
+    background-position: center; 
+    padding: 20px; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .row {
+        .col-md-6 {
+            .card {
+                margin-left: 20px;
+                width: 200px; 
+                height: 200px; 
+                background-color: #fbfbfa; 
+                border-radius: 10px; 
+                box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1); 
+                transition: transform 0.3s ease-in-out;
+                background-image: url('https://i.pinimg.com/736x/2a/ae/13/2aae13630b712aa08f5fc36853622c37.jpg'); 
+              
+                &:hover {
+                    transform: translateY(-5px); 
+                }
+
+                .card-body {
+                    position: relative;
+                    padding: 20px;
+
+                    .card-title {
+                        color: #333333;
+                        font-size: 1.3rem; 
+                        font-weight: bold;
+                        margin-bottom: 5px; 
+                        text-align: center; 
+                    }
+
+                    .card-text {
+                        color: #3d1fd1; 
+                        font-size: 1.1rem; 
+                        margin-bottom: 5px; 
+                        text-align: center; 
+                    }
+
+                    .profile-icon {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        font-size: 24px;
+                        color: #007bff; 
+                        transition: color 0.3s ease-in-out;
+
+                        &:hover {
+                            color: #0056b3; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container .card img {
+    width: 100px; 
+    height: 100px; 
+    margin-left: auto; 
+    margin-right: auto;
+    display: block; 
+    border-radius: 50%; 
+}
